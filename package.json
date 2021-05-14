@@ -1,0 +1,36 @@
+{
+  "name": "FoodSpin_01",
+  "version": "1.0.0",
+  "description": "Frontend development exercise.",
+  "main": "scripts/index.js",
+  "private": true,
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gdfederici/WFE_LP04-FoodSpin_01.git"
+  },
+  "keywords": [],
+  "author": "GDFederici",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gdfederici/WFE_LP04-FoodSpin_01/issues"
+  },
+  "homepage": "https://github.com/gdfederici/WFE_LP04-FoodSpin_01#readme",
+  "devDependencies": {
+    "@babel/core": "^7.14.2",
+    "@babel/plugin-transform-runtime": "^7.14.2",
+    "@babel/preset-env": "^7.14.2",
+    "babel-loader": "^8.2.2",
+    "css-loader": "^5.2.4",
+    "html-loader": "^2.1.2",
+    "html-webpack-plugin": "^5.3.1",
+    "sass": "^1.32.13",
+    "sass-loader": "^11.1.1",
+    "style-loader": "^2.0.0",
+    "webpack": "^5.37.0",
+    "webpack-cli": "^4.7.0"
+  }
+}
