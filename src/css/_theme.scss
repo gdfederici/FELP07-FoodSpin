@@ -34,6 +34,7 @@ h1 {
     }
 }
 
+
 /*** HEADER ***/
 .header {
     & a {
@@ -80,6 +81,18 @@ h1 {
         }
         & .arrows img {
             background: $color-theme_2;
+        }
+    }
+}
+
+
+/*** FOOTER ***/
+footer {
+    & a {
+        color: $color-text_dark;
+        text-decoration: none;
+        &:hover {
+            text-decoration: underline;
         }
     }
 }
