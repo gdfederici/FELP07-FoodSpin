@@ -11,3 +11,29 @@ body {
     padding: 14px 41px;
     border-radius: 69px;
 }
+
+
+/*** HEADER ***/
+.header {
+    position: relative;
+    z-index: 10;
+    display: flex;
+    justify-content: space-between;
+    width: 1080px;
+    height: 27px;
+    padding: 47px 100px 0 100px;
+    &-logo {
+        margin-right: 170px;
+        padding-left: 21px;
+    }
+    &-nav {
+        display: flex;
+        margin-right: 510px;
+        & li {
+            margin-left: 60px;
+            &:first-child {
+                margin-left: 0;
+            }
+        }
+    }
+}

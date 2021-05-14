@@ -52,6 +52,7 @@ table {
 /*** VARIABLES ***/
 $layout_max: 1280px;
 /*** BASECAMP ***/
-:root {
-    font-size: 62.5%; /* px->rem in base 10 */
+:root { font-size: 62.5%; /* px->rem in base 10 */ }
+button {
+	border: none;
 }

@@ -88,3 +88,17 @@ h1 {
     line-height: $line-height_normal;
     text-transform: uppercase;
 }
+
+
+/*** HEADER ***/
+.header {
+    font-weight: $font_semibold;
+    &-logo {
+        line-height: $line-height_logo;
+        font-size: $font-size_logo;
+    }
+    &-nav {
+        line-height: $line-height_nav;
+        font-size: $font-size_nav;
+    }
+}
