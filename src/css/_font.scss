@@ -102,3 +102,13 @@ h1 {
         font-size: $font-size_nav;
     }
 }
+
+
+/*** MAIN ***/
+.spin-sx {
+    &-price {
+        font-size: $font-size_price;
+        line-height: $line-height_price;
+        font-weight: $font_bold;
+    }
+}

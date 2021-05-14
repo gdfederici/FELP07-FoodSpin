@@ -47,3 +47,39 @@ h1 {
         background: url("../img/logo-foodspin.svg") no-repeat left;
     }
 }
+
+
+/*** MAIN ***/
+/*** DIFFERENT COLOR ***/
+.spin__color {
+    &-a {
+        & .price {
+            color: $color-theme_1;
+        }
+        & .button {
+            background-color: $color-theme_1;
+            box-shadow: 0px 20px 40px $color-back_1;
+        }
+        & .background {
+            background: $color-back_1;
+        }
+        & .arrows img {
+            background: $color-theme_1;
+        }
+    }
+    &-b {
+        & .price {
+            color: $color-theme_2;
+        }
+        & .button {
+            background-color: $color-theme_2;
+            box-shadow: 0px 20px 40px $color-back_2;
+        }
+        & .background {
+            background: $color-back_2;
+        }
+        & .arrows img {
+            background: $color-theme_2;
+        }
+    }
+}

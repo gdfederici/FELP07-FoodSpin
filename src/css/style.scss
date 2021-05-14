@@ -37,3 +37,75 @@ body {
         }
     }
 }
+
+
+/*** MAIN ***/
+main {
+    margin-top: -74px;
+}
+.spin {
+    display: none;
+    justify-content: space-between;
+    position: relative;
+    overflow: hidden;
+}
+
+.spin-sx {
+    width: 367px;
+    padding-top: 286px;
+    padding-left: 100px;
+    &-text {
+        margin-top: 12px;
+        margin-bottom: 28px;
+    }
+}
+
+.spin-dx {
+    width: 813px;
+    padding-top: 200px;
+    padding-bottom: 10px;
+    &-infernalcircle {
+        width: 1177px;
+        height: 1177px;
+        position: absolute;
+        left: 283px;
+        top: -645px;
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+        border-radius: 50%;
+        overflow: hidden;
+    }
+    &-wheel {
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+        margin-bottom: -330px;
+    }
+    &-food {
+        position: relative;
+        z-index: 100;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-top: 168px;
+    }
+}
+
+.spin-controls {
+    width: 602px;
+    display: flex;
+    justify-content: space-between;
+    margin: -75px auto 0 auto;
+    & a {
+        position: relative;
+        z-index: 200;
+        display: block;
+    }
+    & img {
+        max-width: 40px;
+        max-height: 40px;
+        padding: 14px;
+        border-radius: 50%;
+    }
+}
