@@ -1,1 +1,31 @@
 @import 'font';
+
+/*** VARIABLES ***/
+$color-theme_1: #ff922c;
+$color-theme_2: #54bf29;
+$color-h1: #696a86;
+$color-text_dark: #333333;
+$color-text_light: #ffffff;
+$color-back: #ffffff;
+$color-back_1: #ffeede;
+$color-back_2: #eaffe2;
+
+/*** ------------------------- *** ------------------------- *** ------------------------- *** ------------------------- ***/
+
+/*** BASECAMP ***/
+body {
+    color: $color-text_dark;
+    background-color: #E5E5E5;
+}
+.content { background-color: $color-back; }
+h1 { color: $color-h1; }
+.button {
+    color: $color-text_light;
+    text-decoration: none;
+    &__typo1 {
+        background-color: $color-back_1;
+    }
+    &__typo2 {
+        background-color: $color-back_2;
+    }
+}
