@@ -1,1 +1,90 @@
 @import 'reset';
+
+/*** FONTS ***/
+/* poppins-regular - latin */
+@font-face {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    src: local(''),
+         url('../fonts/poppins-v15-latin-regular.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+         url('../fonts/poppins-v15-latin-regular.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+/* poppins-500 - latin */
+@font-face {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    src: local(''),
+         url('../fonts/poppins-v15-latin-500.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+         url('../fonts/poppins-v15-latin-500.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+/* poppins-600 - latin */
+@font-face {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    src: local(''),
+         url('../fonts/poppins-v15-latin-600.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+         url('../fonts/poppins-v15-latin-600.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+/* poppins-700 - latin */
+@font-face {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 700;
+    src: local(''),
+         url('../fonts/poppins-v15-latin-700.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+         url('../fonts/poppins-v15-latin-700.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+/*** VARIABLES ***/
+$font-h_1: 'Poppins', Arial, Helvetica, sans-serif;
+$font-p: 'Poppins', Arial, Helvetica, sans-serif;
+$font-button: 'Poppins', Arial, Helvetica, sans-serif;
+$font_normal: 400;
+$font_semibold: 500;
+$font_bold: 600;
+$font_extrabold: 700;
+$font-size_h1: 3.6rem;
+$font-size_normal: 1.3rem;
+$font-size_logo: 1.8rem;
+$font-size_nav: 1.4rem;
+$font-size_price: 4.4rem;
+$line-height_h1: 5.0rem;
+$line-height_normal: 1.95rem;
+$line-height_logo: 2.7rem;
+$line-height_nav: 2.1rem;
+$line-height_price: 6.6rem;
+
+
+/*** ------------------------- *** ------------------------- *** ------------------------- *** ------------------------- ***/
+
+/*** BASECAMP ***/
+body {
+    font: {
+        family: $font-p;
+        weight: $font_normal;
+        size: $font-size_normal;
+    }
+    line-height: $line-height_normal;
+    text-align: left;
+    text-transform: capitalize;
+}
+h1 {
+    font: {
+        family: $font-h_1;
+        weight: $font-semibold;
+        size: $font-size_h1;
+    }
+    line-height: $line-height_h1;
+}
+.button {
+    font: {
+        family: $font-button;
+        weight: $font_extrabold;
+        size: $font-size_normal;
+    }
+    line-height: $line-height_normal;
+    text-transform: uppercase;
+}
