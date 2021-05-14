@@ -30,13 +30,20 @@ window.isDishes = function() {
     document.getElementById("main").appendChild(ringaRinga);
 }
 
+// IT_ Visualizza il singolo piatto della lista. | EN_ View the single dish on the list.
 function createDish(itemPrice, itemTitle, itemDescription, itemImage, position) {
     let listItem = document.createElement("li");
     let color;
     (position %2) === 0 ?  (color = "a") : (color = "b");
     console.log("color", color);
     listItem.className = "spin spin__color-"+ color;
-    
+    listItem.appendChild(createSX(itemPrice, itemTitle, itemDescription));
+    listItem.appendChild(createDX(itemImage));
+    return listItem;
+}
+
+// IT_ Crea la parte SX con prezzo, titolo, descrizione e bottone d'ordine. | EN_ Create the SX part with price, title, description and order button.
+function createSX(itemPrice, itemTitle, itemDescription) {
     let listItemSX = document.createElement("div");
     listItemSX.className = "spin-sx";
     let listItemPrice = document.createElement("p");
@@ -58,32 +65,23 @@ function createDish(itemPrice, itemTitle, itemDescription, itemImage, position) 
     listItemButton.appendChild(document.createTextNode("Order Now"));
     listItemOrder.appendChild(listItemButton);
     listItemSX.appendChild(listItemOrder);
+    return listItemSX;
+}
 
+// IT_ Crea la parte DX con ruota dei piatti e immagine piatto principale. | EN_ Create the DX part with the dishes wheel and main food image.
+function createDX(itemImage) {
     let listItemDX = document.createElement("div");
     listItemDX.className = "spin-dx";
     let listItemCircle = document.createElement("div");
     listItemCircle.className = "spin-dx-infernalcircle background";
     let listItemWheel = document.createElement("div");
     listItemWheel.className = "spin-dx-wheel";
-    let listItemImage = document.createElement("img");
-    listItemImage.className = "ruotacibo";
-    listItemImage.src = "img/food-circle.png";
-    listItemImage.width = "657";
-    listItemImage.height = "657";
-    listItemImage.loading = "lazy";
-    listItemImage.alt = "Circle food";
-    listItemWheel.appendChild(listItemImage);
+    listItemWheel.appendChild(createImage("ruotacibo", "img/food-circle.png", "657", "657", "Circle food"));
     listItemCircle.appendChild(listItemWheel);
     listItemDX.appendChild(listItemCircle);
     let listItemFood = document.createElement("div");
     listItemFood.className = "spin-dx-food";
-    let listItemFoodImage = document.createElement("img");
-    listItemFoodImage.src = "img/food-big_"+itemImage+".png";
-    listItemFoodImage.width = "289";
-    listItemFoodImage.height = "295";
-    listItemFoodImage.loading = "lazy";
-    listItemFoodImage.alt = "Main Food";
-    listItemFood.appendChild(listItemFoodImage);
+    listItemFood.appendChild(createImage("", "img/" + itemImage, "289", "295", "Main Food"));
     listItemDX.appendChild(listItemFood);
     let listItemControls = document.createElement("div");
     listItemControls.className = "spin-controls arrows";
@@ -91,22 +89,24 @@ function createDish(itemPrice, itemTitle, itemDescription, itemImage, position) 
     listItemPrev.className = "prev";
     let listItemNext = document.createElement("a");
     listItemNext.className = "next";
-    let listItemArrow = document.createElement("img");
-    listItemArrow.src = "img/arrow-down.png";
-    listItemPrev.appendChild(listItemArrow);
-    listItemNext.appendChild(listItemArrow);
+    listItemPrev.appendChild(createImage("", imgArrow, "14", "14", "Spin arrow"));
+    listItemNext.appendChild(createImage("", imgArrow, "14", "14", "Spin arrow"));
     listItemControls.appendChild(listItemPrev);
     listItemControls.appendChild(listItemNext);
     listItemDX.appendChild(listItemControls);
-
-    listItem.appendChild(listItemSX);
-    listItem.appendChild(listItemDX);
-    return listItem;
+    return listItemDX;
 }
-
-
-
-
+// IT_ Crea l'elemento immagine da inserire. | EN_ Create the image element to insert.
+function createImage(imgClass, imgSrc, imgWidth, imgHeight, imgAlt) {
+    let newImage = document.createElement("img");
+    newImage.className = imgClass;
+    newImage.src = imgSrc;
+    newImage.width = imgWidth;
+    newImage.height = imgHeight;
+    newImage.loading = "lazy";
+    newImage.alt = imgAlt;
+    return newImage;
+}
 
 
 /*** NEXT/PREV SPIN ***/
@@ -123,8 +123,7 @@ window.showFood = function(index, n) {
     if ( index > foods.length ) { foodIndex = 1; }
     if ( index < 1 ) { foodIndex = foods.length; }
     magicabula(foods[foodIndex-1], n);
-    }
-
+}
 window.hideWheel = function(itemHide) {
     itemHide.style.display = "none";
 }
@@ -142,6 +141,5 @@ window.spinNext = function(itemNext) {
 
 /*** MAIN ***/
 isDishes();
-
 var foodIndex = 1;
 showFood(foodIndex);
