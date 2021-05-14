@@ -1,1 +1,13 @@
 @import 'theme';
+
+/*** ------------------------- *** ------------------------- *** ------------------------- *** ------------------------- ***/
+
+/*** BASECAMP ***/
+body {
+    margin: 0 auto 0 auto;
+    width: $layout-max;
+}
+.button {
+    padding: 14px 41px;
+    border-radius: 69px;
+}
