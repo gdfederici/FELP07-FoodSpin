@@ -28,6 +28,7 @@ window.isDishes = function() {
         ringaRinga.appendChild(createDish(listDishes[i].price, listDishes[i].title, listDishes[i].description, listDishes[i].image, listDishes[i].link, i));
     }
     document.getElementById("main").appendChild(ringaRinga);
+    return;
 }
 
 // IT_ Visualizza il singolo piatto della lista. | EN_ View the single dish on the list.
@@ -76,7 +77,7 @@ function createDX(itemImage) {
     listItemCircle.className = "spin-dx-infernalcircle background";
     let listItemWheel = document.createElement("div");
     listItemWheel.className = "spin-dx-wheel";
-    listItemWheel.appendChild(createImage("ruotacibo", "img/food-circle.png", "657", "657", "Circle food"));
+    listItemWheel.appendChild(createImage("ruotacibo", imgFoodCircle, "657", "657", "Circle food"));
     listItemCircle.appendChild(listItemWheel);
     listItemDX.appendChild(listItemCircle);
     let listItemFood = document.createElement("div");
@@ -87,9 +88,11 @@ function createDX(itemImage) {
     listItemControls.className = "spin-controls arrows";
     let listItemPrev = document.createElement("a");
     listItemPrev.className = "prev";
+    listItemPrev.setAttribute("id", "arrowPrev");
+    listItemPrev.appendChild(createImage("", imgArrow, "14", "14", "Spin arrow"));
     let listItemNext = document.createElement("a");
     listItemNext.className = "next";
-    listItemPrev.appendChild(createImage("", imgArrow, "14", "14", "Spin arrow"));
+    listItemNext.setAttribute("id", "arrowNext");
     listItemNext.appendChild(createImage("", imgArrow, "14", "14", "Spin arrow"));
     listItemControls.appendChild(listItemPrev);
     listItemControls.appendChild(listItemNext);
@@ -127,12 +130,8 @@ window.showFood = function(index, n) {
 window.hideWheel = function(itemHide) {
     itemHide.style.display = "none";
 }
-window.magicabula = function(itemShow, n) {
+window.magicabula = function(itemShow) {
     itemShow.style.display = "flex";
-    //itemShow.getElementsByClassName("price")[0].classList.add("zoom__in");
-    //itemShow.getElementsByClassName("spin-sx-title")[0].classList.add("zoom__in");
-    //itemShow.getElementsByClassName("spin-sx-text")[0].classList.add("zoom__in");
-    //itemShow.getElementsByClassName("spin-dx-wheel")[0].classList.add("rotate__next");
 }
 window.spinNext = function(itemNext) {
     itemNext.getElementsByClassName("spin-dx-wheel")[0].classList.add("rotate__next");
@@ -143,3 +142,5 @@ window.spinNext = function(itemNext) {
 isDishes();
 var foodIndex = 1;
 showFood(foodIndex);
+//getElementById("arrowPrev").addEventListener("click", spinWheel(-1));
+//getElementById("arrowNext").addEventListener("click", spinWheel(1));
