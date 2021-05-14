@@ -36,6 +36,13 @@ h1 {
 
 /*** HEADER ***/
 .header {
+    & a {
+        color: $color-text_dark;
+        text-decoration: none;
+        &:hover {
+            text-decoration: underline;
+        }
+    }
     &-logo {
         background: url("../img/logo-foodspin.svg") no-repeat left;
     }
