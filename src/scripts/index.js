@@ -86,11 +86,11 @@ function createDX(itemImage) {
     listItemDX.appendChild(listItemFood);
     let listItemControls = document.createElement("div");
     listItemControls.className = "spin-controls arrows";
-    let listItemPrev = document.createElement("a");
+    let listItemPrev = document.createElement("button");
     listItemPrev.className = "prev";
     listItemPrev.setAttribute("id", "arrowPrev");
     listItemPrev.appendChild(createImage("", imgArrow, "14", "14", "Spin arrow"));
-    let listItemNext = document.createElement("a");
+    let listItemNext = document.createElement("button");
     listItemNext.className = "next";
     listItemNext.setAttribute("id", "arrowNext");
     listItemNext.appendChild(createImage("", imgArrow, "14", "14", "Spin arrow"));
@@ -113,7 +113,7 @@ function createImage(imgClass, imgSrc, imgWidth, imgHeight, imgAlt) {
 
 
 /*** NEXT/PREV SPIN ***/
-window.spinWheel = function(n) {
+function spinWheel(n) {
     showFood(foodIndex += n, n);
 }
 
@@ -127,20 +127,18 @@ window.showFood = function(index, n) {
     if ( index < 1 ) { foodIndex = foods.length; }
     magicabula(foods[foodIndex-1], n);
 }
-window.hideWheel = function(itemHide) {
+function hideWheel(itemHide) {
     itemHide.style.display = "none";
 }
-window.magicabula = function(itemShow) {
+function magicabula(itemShow) {
     itemShow.style.display = "flex";
 }
-window.spinNext = function(itemNext) {
-    itemNext.getElementsByClassName("spin-dx-wheel")[0].classList.add("rotate__next");
-}
+
 
 
 /*** MAIN ***/
 isDishes();
 var foodIndex = 1;
 showFood(foodIndex);
-//getElementById("arrowPrev").addEventListener("click", spinWheel(-1));
-//getElementById("arrowNext").addEventListener("click", spinWheel(1));
+document.getElementById("arrowPrev").addEventListener("click", function() { spinWheel(-1); });
+document.getElementById("arrowNext").addEventListener("click", function() { spinWheel(1); });

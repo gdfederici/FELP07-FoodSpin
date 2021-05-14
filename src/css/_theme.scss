@@ -51,6 +51,11 @@ h1 {
 
 
 /*** MAIN ***/
+.spin-controls {
+    & button {
+        background: none;
+    }
+}
 /*** DIFFERENT COLOR ***/
 .spin__color {
     &-a {

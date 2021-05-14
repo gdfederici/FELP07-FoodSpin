@@ -97,10 +97,9 @@ main {
     display: flex;
     justify-content: space-between;
     margin: -75px auto 0 auto;
-    & a {
-        position: relative;
-        z-index: 200;
-        display: block;
+    & button {
+        //position: relative;
+        //z-index: 200;
     }
     & img {
         max-width: 40px;
