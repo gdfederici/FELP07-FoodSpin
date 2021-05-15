@@ -98,8 +98,8 @@ main {
     justify-content: space-between;
     margin: -75px auto 0 auto;
     & button {
-        //position: relative;
-        //z-index: 200;
+        position: relative;
+        z-index: 500;
     }
     & img {
         max-width: 40px;
