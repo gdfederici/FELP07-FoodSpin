@@ -89,10 +89,12 @@ function createDX(itemImage) {
     let listItemPrev = document.createElement("button");
     listItemPrev.className = "prev";
     listItemPrev.setAttribute("id", "arrowPrev");
+    listItemPrev.onclick = function() { spinWheel(-1); };
     listItemPrev.appendChild(createImage("", imgArrow, "14", "14", "Spin arrow"));
     let listItemNext = document.createElement("button");
     listItemNext.className = "next";
     listItemNext.setAttribute("id", "arrowNext");
+    listItemNext.onclick = function() { spinWheel(1); };
     listItemNext.appendChild(createImage("", imgArrow, "14", "14", "Spin arrow"));
     listItemControls.appendChild(listItemPrev);
     listItemControls.appendChild(listItemNext);
@@ -140,5 +142,3 @@ function magicabula(itemShow) {
 isDishes();
 var foodIndex = 1;
 showFood(foodIndex);
-document.getElementById("arrowPrev").addEventListener("click", function() { spinWheel(-1); });
-document.getElementById("arrowNext").addEventListener("click", function() { spinWheel(1); });
