@@ -25,7 +25,7 @@ window.isDishes = function() {
     let allDishes = listDishes.length;
     console.log("allDishes", allDishes);
     for (let i=0; i<allDishes; i++) {
-        ringaRinga.appendChild(createDish(listDishes[i].price, listDishes[i].title, listDishes[i].description, listDishes[i].image, listDishes[i].link, i));
+        ringaRinga.appendChild(createDish(listDishes[i].price, listDishes[i].title, listDishes[i].description, listDishes[i].image, i));
     }
     document.getElementById("main").appendChild(ringaRinga);
     return;
@@ -36,7 +36,6 @@ function createDish(itemPrice, itemTitle, itemDescription, itemImage, position) 
     let listItem = document.createElement("li");
     let color;
     (position %2) === 0 ?  (color = "a") : (color = "b");
-    console.log("color", color);
     listItem.className = "spin spin__color-"+ color;
     listItem.appendChild(createSX(itemPrice, itemTitle, itemDescription));
     listItem.appendChild(createDX(itemImage));

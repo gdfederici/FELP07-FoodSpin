@@ -1,14 +1,14 @@
 {
     "dishesList":[
-        {"price":"$32", "title":"Green Goddess Chicken Salad", "description":"It is a non vegetarian salad which consists of the green goddess dressing mixed with chicken, peppers, olives and celery.", "image":"food-big_0.png", "link":"#"},
-        {"price":"$35", "title":"Asian Cucumber Salad", "description":"Asian Cucumber Salad Recipe made with crunchy cucumber, onion, rice wine vinegar, and a few secret ingredients!", "image":"food-big_1.png", "link":"#"},
-        {"price":"$30", "title":"Lorem ipsum dolor", "description":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eget quam in lorem imperdiet condimentum eget et libero.", "image":"food-big_2.png", "link":"#"},
-        {"price":"$26", "title":"Maecenas at ornare metus", "description":"Maecenas at ornare metus. Duis interdum massa nulla, vel faucibus felis ullamcorper quis. Cras dignissim rutrum nunc.", "image":"food-big_3.png", "link":"#"},
-        {"price":"$51", "title":"Nunc sit amet ligula", "description":"Nunc sit amet ligula ex. Nulla vel nunc eu lectus cursus imperdiet. Ut laoreet ligula et risus auctor eleifend.", "image":"food-big_4.png", "link":"#"},
-        {"price":"$39", "title":"Nam sed dictum justo", "description":"Nam sed dictum justo, in facilisis elit. Integer congue elit sed orci interdum dignissim. Vestibulum ante ipsum primis.", "image":"food-big_5.png", "link":"#"},
-        {"price":"$24", "title":"Ut gravida leo", "description":"Ut gravida leo quis orci egestas, vitae sagittis nisl finibus. Maecenas sodales rutrum consectetur. Nunc placerat lorem.", "image":"food-big_6.png", "link":"#"},
-        {"price":"$33", "title":"Duis at finibus urna", "description":"Duis at finibus urna. Nulla arcu tellus, rhoncus in velit et, semper aliquam mauris. Donec in odio id lorem tempor.", "image":"food-big_7.png", "link":"#"},
-        {"price":"$27", "title":"Aenean velit odio", "description":"Aenean velit odio, efficitur vitae velit id, laoreet facilisis dolor. Vivamus non diam mi. Suspendisse vulputate malesuada.", "image":"food-big_8.png", "link":"#"},
-        {"price":"$50", "title":"Curabitur ullamcorper commodo", "description":"Curabitur ullamcorper commodo dui quis luctus. Maecenas auctor sagittis nunc eu blandit. Nam tristique ligula non arcu.", "image":"food-big_9.png", "link":"#"}
+        {"price":"$32", "title":"Green Goddess Chicken Salad", "description":"It is a non vegetarian salad which consists of the green goddess dressing mixed with chicken, peppers, olives and celery.", "image":"food-big_0.png"},
+        {"price":"$35", "title":"Asian Cucumber Salad", "description":"Asian Cucumber Salad Recipe made with crunchy cucumber, onion, rice wine vinegar, and a few secret ingredients!", "image":"food-big_1.png"},
+        {"price":"$30", "title":"Lorem ipsum dolor", "description":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eget quam in lorem imperdiet condimentum eget et libero.", "image":"food-big_2.png"},
+        {"price":"$26", "title":"Maecenas at ornare metus", "description":"Maecenas at ornare metus. Duis interdum massa nulla, vel faucibus felis ullamcorper quis. Cras dignissim rutrum nunc.", "image":"food-big_3.png"},
+        {"price":"$51", "title":"Nunc sit amet ligula", "description":"Nunc sit amet ligula ex. Nulla vel nunc eu lectus cursus imperdiet. Ut laoreet ligula et risus auctor eleifend.", "image":"food-big_4.png"},
+        {"price":"$39", "title":"Nam sed dictum justo", "description":"Nam sed dictum justo, in facilisis elit. Integer congue elit sed orci interdum dignissim. Vestibulum ante ipsum primis.", "image":"food-big_5.png"},
+        {"price":"$24", "title":"Ut gravida leo", "description":"Ut gravida leo quis orci egestas, vitae sagittis nisl finibus. Maecenas sodales rutrum consectetur. Nunc placerat lorem.", "image":"food-big_6.png"},
+        {"price":"$33", "title":"Duis at finibus urna", "description":"Duis at finibus urna. Nulla arcu tellus, rhoncus in velit et, semper aliquam mauris. Donec in odio id lorem tempor.", "image":"food-big_7.png"},
+        {"price":"$27", "title":"Aenean velit odio", "description":"Aenean velit odio, efficitur vitae velit id, laoreet facilisis dolor. Vivamus non diam mi. Suspendisse vulputate malesuada.", "image":"food-big_8.png"},
+        {"price":"$50", "title":"Curabitur ullamcorper commodo", "description":"Curabitur ullamcorper commodo dui quis luctus. Maecenas auctor sagittis nunc eu blandit. Nam tristique ligula non arcu.", "image":"food-big_9.png"}
     ]
 }
