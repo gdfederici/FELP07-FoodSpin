@@ -10,16 +10,6 @@ import imgFood6 from '../img/food-big_6.png';
 import imgFood7 from '../img/food-big_7.png';
 import imgFood8 from '../img/food-big_8.png';
 import imgFood9 from '../img/food-big_9.png';
-//import thumbFood0 from '../img/food-small_0.png';
-//import thumbFood1 from '../img/food-small_1.png';
-//import thumbFood2 from '../img/food-small_2.png';
-//import thumbFood3 from '../img/food-small_3.png';
-//import thumbFood4 from '../img/food-small_4.png';
-//import thumbFood5 from '../img/food-small_5.png';
-//import thumbFood6 from '../img/food-small_6.png';
-//import thumbFood7 from '../img/food-small_7.png';
-//import thumbFood8 from '../img/food-small_8.png';
-//import thumbFood9 from '../img/food-small_9.png';
 import imgArrow from '../img/arrow-down.png';
 import dishesJson from './dishes.json';
 
