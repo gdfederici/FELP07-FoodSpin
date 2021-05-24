@@ -170,13 +170,14 @@ function createArrowControl(imgArrow, classArrow, idArrow, x) {
 }
 
 
+
 /*** NEXT/PREV SPIN ***/
 function spinWheel(n) {
     showFood(foodIndex += n, n);
 }
 
 /*** SHOW FOOD ***/
-window.showFood = function(index, n) {
+function showFood(index, n) {
     var foods = document.getElementsByClassName("spin");
     //for (let i = 0; i < foods.length; i++) { foods[i].style.display = "none"; }
     //Array.from(foods).forEach(element => element.style.display = "none");
@@ -184,12 +185,31 @@ window.showFood = function(index, n) {
     if ( index > foods.length ) { foodIndex = 1; }
     if ( index < 1 ) { foodIndex = foods.length; }
     magicabula(foods[foodIndex-1], n);
-}
+    }
+
 function hideWheel(itemHide) {
     itemHide.style.display = "none";
+    itemHide.getElementsByClassName("spin-dx-wheel")[0].classList.remove("circle_next");
+    itemHide.getElementsByClassName("spin-dx-wheel")[0].classList.remove("circle_prev");
+
 }
-function magicabula(itemShow) {
+function magicabula(itemShow, n) {
     itemShow.style.display = "flex";
+    itemShow.getElementsByClassName("price")[0].classList.add("in_text");
+    itemShow.getElementsByClassName("spin-sx-title")[0].classList.add("in_text");
+    itemShow.getElementsByClassName("spin-sx-text")[0].classList.add("in_text");
+    itemShow.getElementsByClassName("spin-dx-food")[0].getElementsByTagName("img")[0].classList.add("in_food");
+    console.log("n", n);
+    if (n === 1) { spinNext(itemShow); }
+    if (n === -1) { spinPrev(itemShow); }
+}
+function spinNext(itemNext) {
+    itemNext.getElementsByClassName("spin-dx-wheel")[0].classList.add("circle_next");
+    console.log("next",  itemNext.getElementsByClassName("spin-dx-wheel")[0]);
+}
+function spinPrev(itemPrev) {
+    itemPrev.getElementsByClassName("spin-dx-wheel")[0].classList.add("circle_prev");
+    console.log("prev",  itemPrev.getElementsByClassName("spin-dx-wheel")[0]);
 }
 
 

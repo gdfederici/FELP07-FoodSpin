@@ -191,7 +191,38 @@ main {
 }
 
 
-
+/*** ANIMATION ***/
+.in_text {
+    animation: animate-in_text .8s;
+    transform-origin: top left;
+}
+@keyframes animate-in_text {
+    0% { transform: scale(0,0); opacity: 0; }
+    100% { transform: scale(1,1); opacity: 1; }
+}
+.in_food {
+    animation: animate-in_food .8s;
+}
+@keyframes animate-in_food {
+    0% { transform: scale(0,0) rotate(-10deg); opacity: 0; }
+    100% { transform: scale(1,1) rotate(0deg); opacity: 1; }
+}
+.circle_next {
+    animation: rotate-circle_next .8s;
+    transform-origin: center center;
+}
+@keyframes rotate-circle_next {
+    0% { transform: rotate(-36deg); }
+    100% { transform: rotate(0deg); }
+}
+.circle_prev {
+    animation: rotate-circle_prev .8s;
+    transform-origin: center center;
+}
+@keyframes rotate-circle_prev {
+    0% { transform: rotate(36deg); }
+    100% { transform: rotate(0deg); }
+}
 
 
 /*** FOOTER ***/
