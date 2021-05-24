@@ -1,5 +1,8 @@
 @import 'theme';
 
+@mixin rotate($property) {
+    transform: rotate($property);
+}
 /*** ------------------------- *** ------------------------- *** ------------------------- *** ------------------------- ***/
 
 /*** BASECAMP ***/
@@ -76,11 +79,10 @@ main {
         border-radius: 50%;
         overflow: hidden;
     }
-    &-wheel {
-        display: flex;
-        justify-content: center;
-        align-items: flex-end;
-        margin-bottom: -330px;
+    &-wheel_dish {
+        position: absolute;
+        top: 0px;
+        left: 250px;
     }
     &-food {
         position: relative;
@@ -89,6 +91,85 @@ main {
         justify-content: center;
         align-items: center;
         padding-top: 168px;
+    }
+}
+
+.spin-dx-wheel {
+    width: 658px;
+    height: 658px;
+    position: relative;
+    bottom: -330px;
+    left: 30px;
+    &_dish-0 {
+        width: 97px;
+        height: 658px;
+        background: url("../img/food-small_0.png") no-repeat top center;
+        //transform: rotate(0deg);
+        //@include rotate(0deg);
+    }
+    &_dish-1 {
+        width: 97px;
+        height: 658px;
+        background: url("../img/food-small_1.png") no-repeat top center;
+        //transform: rotate(36deg);
+        //@include rotate(36deg);
+    }
+    &_dish-2 {
+        width: 97px;
+        height: 658px;
+        background: url("../img/food-small_2.png") no-repeat top center;
+        //transform: rotate(72deg);
+    }
+    &_dish-3 {
+        width: 97px;
+        height: 658px;
+        background: url("../img/food-small_3.png") no-repeat top center;
+        //transform: rotate(108deg);
+    }
+    &_dish-4 {
+        width: 97px;
+        height: 658px;
+        background: url("../img/food-small_4.png") no-repeat top center;
+        //transform: rotate(144deg);
+    }
+    &_dish-5 {
+        width: 97px;
+        height: 658px;
+        background: url("../img/food-small_5.png") no-repeat top center;
+        //transform: rotate(180deg);
+    }
+    &_dish-6 {
+        width: 97px;
+        height: 658px;
+        background: url("../img/food-small_6.png") no-repeat top center;
+        //transform: rotate(216deg);
+    }
+    &_dish-7 {
+        width: 97px;
+        height: 658px;
+        background: url("../img/food-small_7.png") no-repeat top center;
+        //transform: rotate(252deg);
+    }
+    &_dish-8 {
+        width: 97px;
+        height: 658px;
+        background: url("../img/food-small_8.png") no-repeat top center;
+        //transform: rotate(288deg);
+    }
+    &_dish-9 {
+        width: 97px;
+        height: 658px;
+        background: url("../img/food-small_9.png") no-repeat top center;
+        //transform: rotate(324deg);
+    }
+    &_backcircle {
+        width: 558px;
+        height: 558px;
+        border: 2px dashed red;
+        border-radius: 50%;
+        position: absolute;
+        top: 49px;
+        left: 20px;
     }
 }
 
