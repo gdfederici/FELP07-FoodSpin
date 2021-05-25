@@ -185,12 +185,27 @@ main {
     0% { transform: scale(0,0); opacity: 0; }
     100% { transform: scale(1,1); opacity: 1; }
 }
+.out_text {
+    animation: animate-out_text 1s;
+    transform-origin: top left;
+}
+@keyframes animate-out_text {
+    0% { transform: scale(1,1); opacity: 1; }
+    100% { transform: scale(0,0); opacity: 0; }
+}
 .in_food {
     animation: animate-in_food .8s;
 }
 @keyframes animate-in_food {
     0% { transform: scale(0,0) rotate(-10deg); opacity: 0; }
     100% { transform: scale(1,1) rotate(0deg); opacity: 1; }
+}
+.out_food {
+    animation: animate-out_food 1s;
+}
+@keyframes animate-out_food {
+    0% { transform: scale(1,1) rotate(0deg); opacity: 1; }
+    100% { transform: scale(0,0) rotate(10deg); opacity: 0; }
 }
 .circle_next {
     animation: rotate-circle_next .8s;

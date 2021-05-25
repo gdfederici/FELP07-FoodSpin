@@ -161,29 +161,52 @@ function createArrowControl(imgArrow, classArrow, idArrow, x) {
 
 
 
+/*** SHOW START ***/
+function showStart() {
+    var startFoods = document.getElementsByClassName("spin");
+    Array.from(startFoods).forEach(element => element.style.display = "none"); // IT_ Nascondo tutti gli elementi. | EN_ Hide list.
+    startFoods[0].style.display = "flex"; // IT_ Mostro il primo elemento. | EN_ Show first dish.
+}
+
+
 /*** NEXT/PREV SPIN ***/
 function spinWheel(n) {
-    showFood(foodIndex += n, n);
+    hideFood(foodIndex);
+    setTimeout(showFood(foodIndex += n, n), 1000);
 }
-
-/*** SHOW FOOD ***/
-function showFood(index, n) {
+/*** HIDE OLD DISH ***/
+function hideFood(index) {
     var foods = document.getElementsByClassName("spin");
-    //for (let i = 0; i < foods.length; i++) { foods[i].style.display = "none"; }
-    //Array.from(foods).forEach(element => element.style.display = "none");
-    Array.from(foods).forEach(hideWheel);
-    if ( index > foods.length ) { foodIndex = 1; }
-    if ( index < 1 ) { foodIndex = foods.length; }
-    magicabula(foods[foodIndex-1], n);
-    }
-
-function hideWheel(itemHide) {
+    offAnimation(foods[foodIndex-1]);
+}
+function offAnimation(itemHide) {
+    itemHide.getElementsByClassName("price")[0].classList.remove("in_text");
+    itemHide.getElementsByClassName("price")[0].classList.add("out_text");
+    itemHide.getElementsByClassName("spin-sx-title")[0].classList.remove("in_text");
+    itemHide.getElementsByClassName("spin-sx-title")[0].classList.add("out_text");
+    itemHide.getElementsByClassName("spin-sx-text")[0].classList.remove("in_text");
+    itemHide.getElementsByClassName("spin-sx-text")[0].classList.add("out_text");
+    itemHide.getElementsByClassName("spin-dx-food")[0].getElementsByTagName("img")[0].classList.remove("in_food");
+    itemHide.getElementsByClassName("spin-dx-food")[0].getElementsByTagName("img")[0].classList.add("out_food");
+    setTimeout(offTotal(itemHide), 1000);
+}
+function offTotal(itemHide) {
     itemHide.style.display = "none";
+    itemHide.getElementsByClassName("price")[0].classList.remove("out_text");
+    itemHide.getElementsByClassName("spin-sx-title")[0].classList.remove("out_text");
+    itemHide.getElementsByClassName("spin-sx-text")[0].classList.remove("out_text");
+    itemHide.getElementsByClassName("spin-dx-food")[0].getElementsByTagName("img")[0].classList.remove("out_food");
     itemHide.getElementsByClassName("spin-dx-wheel")[0].classList.remove("circle_next");
     itemHide.getElementsByClassName("spin-dx-wheel")[0].classList.remove("circle_prev");
-
 }
-function magicabula(itemShow, n) {
+/*** SHOW NEW DISH ***/
+function showFood(index, n) {
+    var foods = document.getElementsByClassName("spin");
+    if ( index > foods.length ) { foodIndex = 1; }
+    if ( index < 1 ) { foodIndex = foods.length; }
+    onAnimation(foods[foodIndex-1], n);
+}
+function onAnimation(itemShow, n) {
     itemShow.style.display = "flex";
     itemShow.getElementsByClassName("price")[0].classList.add("in_text");
     itemShow.getElementsByClassName("spin-sx-title")[0].classList.add("in_text");
@@ -195,15 +218,14 @@ function magicabula(itemShow, n) {
 }
 function spinNext(itemNext) {
     itemNext.getElementsByClassName("spin-dx-wheel")[0].classList.add("circle_next");
-    console.log("next",  itemNext.getElementsByClassName("spin-dx-wheel")[0]);
 }
 function spinPrev(itemPrev) {
     itemPrev.getElementsByClassName("spin-dx-wheel")[0].classList.add("circle_prev");
-    console.log("prev",  itemPrev.getElementsByClassName("spin-dx-wheel")[0]);
 }
+
 
 
 /*** MAIN ***/
 isFood();
+showStart();
 var foodIndex = 1;
-showFood(foodIndex, 0);
