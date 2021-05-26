@@ -1,5 +1,5 @@
 # FoodSpin Page
-**IT_** Pagina con ruota per scelta piatti ristoranre (solo versione desktop).<br/>
+**IT_** Pagina con ruota per scelta piatti ristorante (solo versione desktop).<br/>
 **EN_** Foodspin page (only desktop).<br/>
 <br/>
 
