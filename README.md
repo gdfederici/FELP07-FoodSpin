@@ -14,8 +14,7 @@
 <br/>
 
 ## Responsive:
-**IT_** No.<br/><br/>
-
+**IT_** No.<br/>
 **EN_** Only desktop.<br/><br/>
 
 ## Link:
