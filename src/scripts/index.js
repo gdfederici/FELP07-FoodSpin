@@ -22,19 +22,19 @@ function isFood() {
     foodList.className = "menu";
     let allDishes = listDishes.length;
     for (let i=0; i<allDishes; i++) {
-        foodList.appendChild(createDish(listDishes[i].price, listDishes[i].title, listDishes[i].description, listDishes[i].image, i));
+        foodList.appendChild(createDish(listDishes[i].price, listDishes[i].title, listDishes[i].description, listDishes[i].image, i, allDishes));
     }
     document.getElementById("main").appendChild(foodList);
 }
 
 // IT_ Visualizza il singolo piatto della lista. | EN_ View the single dish on the list.
-function createDish(itemPrice, itemTitle, itemDescription, itemImage, position) {
+function createDish(itemPrice, itemTitle, itemDescription, itemImage, position, howMany) {
     let listItem = document.createElement("li");
     let color;
     (position %2) === 0 ?  (color = "a") : (color = "b");
     listItem.className = "spin spin__color-"+ color;
     listItem.appendChild(createSX(itemPrice, itemTitle, itemDescription));
-    listItem.appendChild(createDX(itemImage, position));
+    listItem.appendChild(createDX(itemImage, position, howMany));
     return listItem;
 }
 
@@ -86,11 +86,11 @@ function createButton() {
 }
 
 // IT_ Crea la parte DX con ruota dei piatti e immagine piatto principale. | EN_ Create the DX part with the dishes wheel and main food image.
-function createDX(itemImage, position) {
+function createDX(itemImage, position, howMany) {
     let listItemDX = document.createElement("div");
     listItemDX.className = "spin-dx";
     // IT_Sfondo e ruota. | EN_ Background and wheel.
-    listItemDX.appendChild(createWheel(position));
+    listItemDX.appendChild(createWheel(position, howMany));
     // IT_ Piatto principale. | EN_ Single food.
     listItemDX.appendChild(createDishOne(itemImage));
     // IT_ Controlli per spin. | EN_ Spin controls.
@@ -99,25 +99,25 @@ function createDX(itemImage, position) {
     return listItemDX;
 }
 // IT_Sfondo e ruota. | EN_ Background and wheel.
-function createWheel(index) {
+function createWheel(index, howMany) {
     // IT_ Sfondo che nasconde. | EN_ Background and overflow hidden.
     let itemCircle = document.createElement("div");
     itemCircle.className = "spin-dx-infernalcircle background";
     // IT_ Ruota dei piatti. | EN_ Circle of dishes.
-    itemCircle.appendChild(createCircle(index));
+    itemCircle.appendChild(createCircle(index, howMany));
     return itemCircle;
 }
 // IT_ Crea il cerchio di cibi presente nello sfondo. | EN_ Create dishes'circle for background.
-function createCircle(imgPosition) {
+function createCircle(imgPosition, allFoods) {
     let itemWheel = document.createElement("div");
     itemWheel.className = "spin-dx-wheel";
     let itemWheel_back = document.createElement("div");
     itemWheel_back.className = "spin-dx-wheel_backcircle";
     itemWheel.appendChild(itemWheel_back);
-    for (let j=0; j<10; j++) {
+    for (let j=0; j<allFoods; j++) {
         let itemWheel_dish = document.createElement("div");
         itemWheel_dish.className = "spin-dx-wheel_dish spin-dx-wheel_dish-" + j;
-        itemWheel_dish.style.transform = "rotate(" + ((imgPosition-j) * 36) +"deg)";
+        itemWheel_dish.style.transform = "rotate(" + ((imgPosition-j) * (360/allFoods)) +"deg)";
         itemWheel.appendChild(itemWheel_dish);
     }
     return itemWheel;
@@ -166,7 +166,6 @@ function showStart() {
     Array.from(startFoods).forEach(element => element.style.display = "none"); // IT_ Nascondo tutti gli elementi. | EN_ Hide list.
     startFoods[0].style.display = "flex"; // IT_ Mostro il primo elemento. | EN_ Show first dish.
 }
-
 
 /*** NEXT/PREV SPIN ***/
 function spinWheel(n) {
