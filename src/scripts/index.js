@@ -170,7 +170,7 @@ function showStart() {
 /*** NEXT/PREV SPIN ***/
 function spinWheel(n) {
     hideFood(foodIndex);
-    setTimeout(showFood(foodIndex += n, n), 1000);
+    setTimeout(function() { showFood(foodIndex += n, n)}, 500);
 }
 /*** HIDE OLD DISH ***/
 function hideFood(index) {
@@ -186,7 +186,7 @@ function offAnimation(itemHide) {
     itemHide.getElementsByClassName("spin-sx-text")[0].classList.add("out_text");
     itemHide.getElementsByClassName("spin-dx-food")[0].getElementsByTagName("img")[0].classList.remove("in_food");
     itemHide.getElementsByClassName("spin-dx-food")[0].getElementsByTagName("img")[0].classList.add("out_food");
-    setTimeout(offTotal(itemHide), 1000);
+    setTimeout( function() { offTotal(itemHide)}, 500);
 }
 function offTotal(itemHide) {
     itemHide.style.display = "none";
