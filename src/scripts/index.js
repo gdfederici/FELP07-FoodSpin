@@ -1,5 +1,5 @@
 import '../css/style.scss';
-import imgFoodCircle from '../img/food-circle.png';
+/*import imgFoodCircle from '../img/food-circle.png';
 import imgFood0 from '../img/food-big_0.png';
 import imgFood1 from '../img/food-big_1.png';
 import imgFood2 from '../img/food-big_2.png';
@@ -9,14 +9,14 @@ import imgFood5 from '../img/food-big_5.png';
 import imgFood6 from '../img/food-big_6.png';
 import imgFood7 from '../img/food-big_7.png';
 import imgFood8 from '../img/food-big_8.png';
-import imgFood9 from '../img/food-big_9.png';
+import imgFood9 from '../img/food-big_9.png';*/
 import imgArrow from '../img/arrow-down.png';
 import dishesJson from './dishes.json';
 
 /*** ------------------------- *** ------------------------- *** ------------------------- *** ------------------------- ***/
 
 /*** DISHES ***/
-window.isFood = function() {
+function isFood() {
 	// IT_ Creo i piatti prendendole dal file json esterno. | EN_ Create dishes taking them from the external json file.
 	let listDishes = dishesJson.dishesList;
     let foodList = document.createElement("ul");
