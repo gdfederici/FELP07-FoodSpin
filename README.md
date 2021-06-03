@@ -18,13 +18,10 @@
 **EN_** Only desktop.<br/><br/>
 
 ## Link:
-https://wfelp04-foodspin01.netlify.app/ <br/>
+https://felp07-foodspin.netlify.app/ <br/>
 <br/>
 
 ## Note:
-**IT_** Primo utilizzo delle transizioni CSS. Secondo utilizzo di Webpack all'interno di un progetto. La lista dei piatti viene presa da un file json esterno.<br/>
-**EN_** First use of CSS transitions. Second use of Webpack within a project. The plate list is taken from an external json file.<br/>
+**IT_** Primo utilizzo delle transizioni CSS. Secondo utilizzo di Webpack all'interno di un progetto. La lista dei piatti viene presa da un file json esterno e creata sottoforma di lista (ritenuto più corretto a livello semantico). Manca animazione bottone perché dal video non sono riuscito a capire il tipo di animazione da implementare.<br/>
+**EN_** First use of CSS transitions. Second use of Webpack within a project. The plate list is taken from an external json file and created in the form of a list (considered more correct at the semantic level). Button animation is missing because from the video I could not understand the type of animation to implement.<br/>
 <br/>
-
-
-Work in Progress... <br/><br />
